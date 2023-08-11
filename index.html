@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" >
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazin Website</title>
+</head>
+<body>
+    <div class="container bg-dark-subtle">
+        <div class="alert alert-primary" role="alert">
+            Hi, My Name Is Mazin, And I Have Big Old Ass Company, And We Are Hiring! 
+        </div>
+        <img src="images/mazin_image.jpeg" alt="" width="300" height="480">
+        <form action="http://localhost:3000/api/v1/hiring-request" method="post">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">What Can You Do Ya Man?</label>
+                <textarea name="canDo" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-3">Submit!</button>
+              </div>
+        </form>
+    </div>
+</body>
+</html>
