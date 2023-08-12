@@ -4,18 +4,18 @@ phases:
   install:
     commands:
       - echo installing Httpd...
-      - dnf update -y
-      - dnf install -y httpd
+      - sudo dnf update -y
+      - sudo dnf install -y httpd
   pre_build:
     commands:
       - echo config the httpd files...
-      - chmod 2775 /var/www
-      - find /var/www -type d -exec sudo chmod 2775 {} \;
-      - find /var/www -type f -exec sudo chmod 0664 {} \;
+      - sudo chmod 2775 /var/www
+      - sudo find /var/www -type d -exec sudo chmod 2775 {} \;
+      - sudo find /var/www -type f -exec sudo chmod 0664 {} \;
   build:
     commands:
       - echo copy the static file to public...
-      - cp . /var/www
+      - sudo cp . /var/www
   post_build:
     commands:
       - echo all done ya man...
